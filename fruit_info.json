@@ -1,0 +1,34 @@
+{
+  "apple": {
+    "facts": [
+      "Floating ability: Apples can float in water because 25% of their volume is made up of air.",
+      "Growth timeline: Standard-size apple trees take 8 to 10 years to bear fruit from seeds, while dwarf trees produce fruit in 3 to 5 years.",
+      "Ripening speed: Apples ripen six to ten times faster at room temperature than when stored in a refrigerator.",
+      "Cider math: It takes roughly 36 medium apples to make one gallon of apple cider."
+    ],
+    "nutrition": {
+      "serving": "1 medium raw apple with skin (approximately 182 g)",
+      "nutrients": {
+        "Calories": "95 kcal",
+        "Water": "Approximately 86%",
+        "Carbohydrates": "25 g",
+        "Sugars": "19 g (naturally occurring)",
+        "Dietary fibre": "4.4 g",
+        "Protein": "0.5 g",
+        "Fat": "0.3 g",
+        "Vitamin C": "Approximately 10% of the Daily Value (DV)",
+        "Potassium": "195 mg",
+        "B vitamins (B6, thiamin, riboflavin)": "Trace amounts"
+      },
+      "source": "User-provided nutrition information"
+    }
+  },
+  "banana": {
+    "facts": [],
+    "nutrition": {
+      "serving": "",
+      "nutrients": {},
+      "source": ""
+    }
+  }
+}
