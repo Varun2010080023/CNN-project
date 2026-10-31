@@ -1,0 +1,78 @@
+{
+  "architecture": "FruitCNN",
+  "trained_from_scratch": true,
+  "classes": [
+    "apple",
+    "banana"
+  ],
+  "parameters": 134674,
+  "seed": 42,
+  "best_epoch": 24,
+  "epochs_completed": 25,
+  "device": "cpu",
+  "training_seconds": 126.73,
+  "validation": {
+    "loss": 0.000252317859606895,
+    "accuracy": 1.0,
+    "count": 300,
+    "confusion_matrix": [
+      [
+        150,
+        0
+      ],
+      [
+        0,
+        150
+      ]
+    ]
+  },
+  "test": {
+    "loss": 3.7437807507922726e-05,
+    "accuracy": 1.0,
+    "count": 297,
+    "confusion_matrix": [
+      [
+        147,
+        0
+      ],
+      [
+        0,
+        150
+      ]
+    ]
+  },
+  "split_counts": {
+    "train": {
+      "apple": {
+        "original": 700,
+        "used": 697
+      },
+      "banana": {
+        "original": 700,
+        "used": 700
+      }
+    },
+    "validation": {
+      "apple": {
+        "original": 150,
+        "used": 150
+      },
+      "banana": {
+        "original": 150,
+        "used": 150
+      }
+    },
+    "test": {
+      "apple": {
+        "original": 150,
+        "used": 147
+      },
+      "banana": {
+        "original": 150,
+        "used": 150
+      }
+    }
+  },
+  "excluded_duplicates": 6,
+  "confusion_matrix_axes": "rows=true, columns=predicted; apple, banana"
+}
