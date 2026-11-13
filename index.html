@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f6eadd">
+  <title>Fruit Lens — Apple or banana?</title>
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="/styles.css">
+  <script src="/app.js" defer></script>
+</head>
+<body>
+  <div class="backdrop" aria-hidden="true"></div>
+  <main class="app-shell">
+    <header class="site-header">
+      <a class="brand" href="/" aria-label="Fruit Lens home">
+        <span class="brand-mark" aria-hidden="true"><span></span></span>
+        <span>fruit<span class="brand-light">lens</span><span class="brand-dot">.</span></span>
+      </a>
+      <span class="header-badge"><span class="status-dot"></span> IMAGE CLASSIFIER</span>
+    </header>
+
+    <section class="hero" aria-labelledby="page-title">
+      <div>
+        <p class="eyebrow"><span class="eyebrow-line"></span> THE FRESHER WAY TO EXPLORE</p>
+        <h1 id="page-title">A fresh look at<br><em>what's in<span class="mobile-line-break"><br></span> your hand.</em></h1>
+        <p class="hero-copy">Upload a photo, and let our fruit lens tell you whether you're looking at an apple or a banana. Discover a little more along the way.</p>
+      </div>
+      <div class="hero-stamp" aria-hidden="true">
+        <span class="stamp-sparkle">✳</span>
+        <span>SNAP<br>DISCOVER<br>DELIGHT</span>
+      </div>
+    </section>
+
+    <section class="workspace" aria-label="Fruit classifier">
+      <div class="glass-card upload-card">
+        <div class="card-heading">
+          <span class="step">01 / YOUR PHOTO</span>
+          <span class="card-icon" aria-hidden="true">↗</span>
+        </div>
+        <h2>Give us a peek.</h2>
+        <p class="card-copy">A clear photo of one apple or banana works best.</p>
+
+        <label class="drop-zone" id="drop-zone" for="photo-input">
+          <input id="photo-input" type="file" accept="image/jpeg,image/png,image/webp" aria-label="Choose a fruit photo">
+          <span class="upload-icon" aria-hidden="true">
+            <svg viewBox="0 0 48 48" fill="none"><rect x="5" y="9" width="38" height="30" rx="8" stroke="currentColor" stroke-width="1.6"/><circle cx="17" cy="19" r="3" stroke="currentColor" stroke-width="1.6"/><path d="m8 32 9-9 7 7 5-5 11 10" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </span>
+          <span class="drop-title">Drop your fruit photo here</span>
+          <span class="drop-subtitle">or <span class="browse-link">browse your files</span></span>
+          <span class="file-types">JPG, PNG OR WEBP <span>·</span> MAX 10 MB</span>
+        </label>
+
+        <div class="preview" id="preview" hidden>
+          <img id="preview-image" alt="Selected fruit photo">
+          <div class="preview-meta"><strong id="file-name"></strong><span>Ready to identify</span></div>
+          <span class="preview-check" aria-hidden="true">✓</span>
+        </div>
+        <p class="error-message" id="error-message" role="alert" hidden></p>
+        <button class="primary-button" id="identify-button" type="button" disabled>
+          <span id="button-label">Identify my fruit</span><span aria-hidden="true">↗</span>
+        </button>
+      </div>
+
+      <div class="glass-card result-card" id="result-card" aria-live="polite">
+        <div class="card-heading">
+          <span class="step">02 / THE DISCOVERY</span>
+          <span class="result-sparkle" aria-hidden="true">✳</span>
+        </div>
+
+        <div class="empty-result" id="empty-result">
+          <div class="empty-illustration" aria-hidden="true"><span>🍎</span><span>🍌</span></div>
+          <h2>The reveal awaits.</h2>
+          <p>Choose a photo and we'll share what we see, plus a few tasty details.</p>
+          <div class="decorative-line"><span></span><span></span><span></span></div>
+        </div>
+
+        <div class="result-content" id="result-content" hidden>
+          <p class="result-intro">Our best match is</p>
+          <div class="result-title-row"><span class="result-emoji" id="result-emoji" aria-hidden="true"></span><h2 id="result-title"></h2></div>
+          <div class="result-divider"></div>
+          <div class="detail-section">
+            <div class="detail-heading"><span class="detail-symbol" aria-hidden="true">✦</span><h3>A little food for thought</h3></div>
+            <p class="fact-text" id="fact-text"></p>
+            <button class="text-button" id="next-fact" type="button" hidden>Another fun fact <span aria-hidden="true">↗</span></button>
+          </div>
+          <div class="detail-section" id="joke-section" hidden>
+            <div class="detail-heading"><span class="detail-symbol" aria-hidden="true">☺</span><h3>A little fruit humour</h3></div>
+            <p class="fact-text" id="joke-text"></p>
+          </div>
+          <div class="detail-section nutrition-section" id="nutrition-section">
+            <div class="detail-heading"><span class="detail-symbol" aria-hidden="true">◌</span><h3>Nutrition notes</h3></div>
+            <p class="serving" id="serving"></p>
+            <dl class="nutrition-list" id="nutrition-list"></dl>
+            <p class="source" id="nutrition-source"></p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <span>Made for curious fruit lovers <span aria-hidden="true">✳</span></span>
+      <span>Fruit Lens identifies apples and bananas only. Other objects may be misclassified.</span>
+    </footer>
+  </main>
+</body>
+</html>
